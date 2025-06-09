@@ -1,43 +1,44 @@
-<!-- Copyright (C) 2023-2025 anonymous
+import { useEffect } from "react"; import { motion } from "framer-motion"; import { Button } from "@/components/ui/button";
 
-This file is part of PSFree.
+export default function SchoolWebsite() { useEffect(() => { document.title = "مدرسة متفوقين بسماية"; }, []);
 
-PSFree is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
+return ( <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-800 text-white p-4"> <header className="text-center py-12"> <motion.h1 className="text-4xl md:text-6xl font-bold mb-4" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} > مدرسة متفوقين بسماية </motion.h1> <motion.p className="text-xl md:text-2xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }} > فخر التعليم في العراق 🇮🇶 </motion.p> </header>
 
-PSFree is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
+<section className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
+    <motion.div
+      className="bg-white/10 backdrop-blur rounded-2xl p-6 shadow-lg"
+      whileHover={{ scale: 1.05 }}
+    >
+      <h2 className="text-2xl font-semibold mb-2">من نحن</h2>
+      <p>
+        مدرسة متفوقين بسماية تأسست لتكون منارة للعلم والمعرفة، تضم نخبة من الطلاب والمعلمين المتميزين.
+      </p>
+    </motion.div>
 
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
--->
+    <motion.div
+      className="bg-white/10 backdrop-blur rounded-2xl p-6 shadow-lg"
+      whileHover={{ scale: 1.05 }}
+    >
+      <h2 className="text-2xl font-semibold mb-2">رؤيتنا</h2>
+      <p>
+        نهدف إلى بناء جيل واعٍ ومثقف يساهم في نهضة العراق من خلال بيئة تعليمية محفزة ومتميزة.
+      </p>
+    </motion.div>
+  </section>
 
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <title>هوست الاول عله باب الشرجي </title>
-        <style>
-            body{background: linear-gradient(to bottom right, #063FAB, #01258A);color:white;font-size:28px;text-align:center;margin:0;overflow:hidden;}
-            .info{position:relative;top:39%;}
-            @font-face {
-                font-family: 'logging';
-                src: url('fonts/LiberationMono-Regular.ttf');
-            }
-            #console {
-                font-family: 'logging';
-            }
-        </style>
-    </head>
-    <body style="background-image: url('icon0.png'); background-repeat: no-repeat; background-size: 100% 100%; background-position: center; min-height: 100vh;">
-      <script>
-       if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
-      </script>
-        <pre id='console'></pre>
-    </body>
-    <script src="payload.js"></script>
-    <script type='module' src='./alert.mjs'></script>
-</html>
+  <section className="text-center my-12">
+    <motion.div
+      className="inline-block bg-yellow-500 text-black font-bold text-xl px-6 py-3 rounded-2xl shadow-lg hover:shadow-2xl"
+      whileHover={{ scale: 1.1, rotate: 1 }}
+    >
+      أهلاً بكم في مستقبل التعليم! ✨
+    </motion.div>
+  </section>
+
+  <footer className="text-center py-6 text-sm text-white/80">
+    &copy; {new Date().getFullYear()} مدرسة متفوقين بسماية - تصميم بإبداع ✨
+  </footer>
+</div>
+
+); }
+
