@@ -1,44 +1,90 @@
-import { useEffect } from "react"; import { motion } from "framer-motion"; import { Button } from "@/components/ui/button";
-
-export default function SchoolWebsite() { useEffect(() => { document.title = "مدرسة متفوقين بسماية"; }, []);
-
-return ( <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-800 text-white p-4"> <header className="text-center py-12"> <motion.h1 className="text-4xl md:text-6xl font-bold mb-4" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} > مدرسة متفوقين بسماية </motion.h1> <motion.p className="text-xl md:text-2xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }} > فخر التعليم في العراق 🇮🇶 </motion.p> </header>
-
-<section className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
-    <motion.div
-      className="bg-white/10 backdrop-blur rounded-2xl p-6 shadow-lg"
-      whileHover={{ scale: 1.05 }}
-    >
-      <h2 className="text-2xl font-semibold mb-2">من نحن</h2>
-      <p>
-        مدرسة متفوقين بسماية تأسست لتكون منارة للعلم والمعرفة، تضم نخبة من الطلاب والمعلمين المتميزين.
-      </p>
-    </motion.div>
-
-    <motion.div
-      className="bg-white/10 backdrop-blur rounded-2xl p-6 shadow-lg"
-      whileHover={{ scale: 1.05 }}
-    >
-      <h2 className="text-2xl font-semibold mb-2">رؤيتنا</h2>
-      <p>
-        نهدف إلى بناء جيل واعٍ ومثقف يساهم في نهضة العراق من خلال بيئة تعليمية محفزة ومتميزة.
-      </p>
-    </motion.div>
-  </section>
-
-  <section className="text-center my-12">
-    <motion.div
-      className="inline-block bg-yellow-500 text-black font-bold text-xl px-6 py-3 rounded-2xl shadow-lg hover:shadow-2xl"
-      whileHover={{ scale: 1.1, rotate: 1 }}
-    >
-      أهلاً بكم في مستقبل التعليم! ✨
-    </motion.div>
-  </section>
-
-  <footer className="text-center py-6 text-sm text-white/80">
-    &copy; {new Date().getFullYear()} مدرسة متفوقين بسماية - تصميم بإبداع ✨
-  </footer>
-</div>
-
-); }
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>الهوست العربي - PS4 9.00</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (!window.applicationCache || !localStorage.is755BCached) {
+            window.location.replace("cache.html");
+        }
+        function showMessage(msg) {
+            document.getElementById("message").innerHTML = msg;
+        }
+    </script>
+    <script src="socket_fix.js"></script>
+    <script src="loader.js"></script>
+    <script type=module src="psfree.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header" style="flex-direction: row; justify-content: space-between; align-items: center; padding: 15px;">
+            <div class="offline-badge" style="width: auto; text-align: left; order: 1;">
+                <span class="offline-text" style="font-size: 24px;">أوف لاين</span>
+                <span class="no-flash-text" style="font-size: 18px;">بدون فلاشة</span>
+            </div>
+            <div class="profile-image" style="order: 2; margin: 0; width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                <img src="profile.jpg" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="animated-title-container" style="width: auto; text-align: right; order: 3;">
+                <h1 class="animated-title" style="font-size: 32px;">هوست حيدر<br><span class="subtitle-ps4" style="font-size: 28px;">PS4 9.00</span></h1>
+            </div>
+        </div>
+        
+        <div id='console' style="font-size: 16px; margin: 15px auto;"></div>
+        
+        <div class="prayer-box" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%); border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 15px; padding: 20px; margin: 20px auto; max-width: 80%; box-shadow: 0 0 25px rgba(255, 255, 255, 0.2); animation: glow 2s infinite ease-in-out;">
+            <h1 style="font-size: 26px; margin: 0; color: #ffffff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);">تجميع وبرمجة كاملة بوساطة حيدر</h1>
+            <div style="width: 50%; height: 2px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent); margin: 15px auto;"></div>
+            <h2 class="subtitle" style="font-size: 20px; margin: 10px 0 0 0; color: rgba(255, 255, 255, 0.9);">انتظر قليلاً</h2>
+        </div>
+        <style>
+            @keyframes glow {
+                0% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.2); }
+                50% { box-shadow: 0 0 35px rgba(255, 255, 255, 0.4); }
+                100% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.2); }
+            }
+        </style>
+        
+        <div id="message" class="message-box" style="margin: 30px auto; font-size: 22px; text-align: center; padding: 20px;">
+            جاري التعديل .. <span class="highlight-text">بوساطة حيدر</span>
+        </div>
+        
+        <div style="height: 40px;"></div>
+        
+        <div class="footer" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13, 17, 23, 0.95);">
+            <div class="footer-content" style="padding: 10px; display: flex; justify-content: space-around; align-items: center;">
+                <div class="footer-item footer-stats" style="padding: 8px 15px; margin: 5px;">
+                    <span class="footer-highlight" style="font-size: 18px;">مبروك </span>
+                    <span class="success-count glow-success" id="passCounter" style="font-size: 20px;"></span>
+                    <span class="footer-divider" style="margin: 0 10px;">|</span>
+                    <span class="footer-highlight" style="font-size: 18px;">اوبس!! </span>
+                    <span class="fail-count glow-fail" id="failCounter" style="font-size: 20px;"></span>
+                </div>
+                
+                <div class="footer-item" style="margin: 5px;">
+                    <div class="social-buttons" style="display: flex; gap: 10px;">
+                        <a href="https://www.youtube.com/c/ISLAMFAYED" class="social-btn social-btn-youtube" style="font-size: 16px; padding: 8px 15px;">YouTube</a>
+                        <a href="https://www.tiktok.com/@isfayed" class="social-btn social-btn-tiktok" style="font-size: 16px; padding: 8px 15px;">TikTok</a>
+                    </div>
+                </div>
+                
+                <div class="footer-item" style="margin: 5px;">
+                    <span style="font-size: 16px; font-family: 'Arabic', serif;">*Designed by:haider *</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount = 0;
+        if (localStorage.passCounter == null || localStorage.passCounter == undefined) {
+          passCounter.innerHTML = localStorage.passcount;
+        }
+        if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount = 0;
+        if (localStorage.failCounter == null || localStorage.failCounter == undefined) {
+          failCounter.innerHTML = localStorage.failcount;
+        }
+    </script>
+</body>
+</html>
